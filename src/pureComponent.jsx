@@ -20,11 +20,11 @@ componentDidMount(){
 }
     render() {
         return (
-            <div className='form-fa-group text-center mt-4 p-3'>
-                <h4 className=' text-center text-dark'>حدث کلمه</h4>
-                <input ref={this.myInput} type="text" className=' form-control' />
+            <div className='form-fa-group text-center mt-4 p-3 container '>
+                <h4 className=' text-center text-dark '>حدث کلمه</h4>
+                <input ref={this.myInput} type="text" className=' form-control shadow-lg text-Light d-flex  w-50 m-auto ' />
                 <button className='btn btn-warning my-3' onClick={this.handleChangeName}>ثبت</button>
-                <button className='btn btn-secondary my-3 mx-2'
+                <button className='btn btn-success my-3 mx-2'
                     onClick={() => this.myInput.current.value = ""}>مخفی</button>
                 <br />
                 <span  >{this.counter++}</span>

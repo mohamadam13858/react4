@@ -1,20 +1,21 @@
 import React, { Component, createRef } from 'react';
 import ReactDOM from 'react-dom';
 import PureCompo from './pureComponent';
+import Fconponent from './Fcomponent';
 
 class PrentConpo extends Component {
     constructor(){
         super()
-        this.componentRef = createRef();
+        this.myInput = createRef()
     }
-    handleChangeCompoName = ()=>{
-        this.componentRef.current.handleChangeName();
+    componentDidMount(){
+        this.myInput.current.focus()
     }
     render() {
         return (
             <div>
-                <PureCompo ref={this.componentRef} />
-                <button className="btn btn-info my-3" onClick={this.handleChangeCompoName} >test</button>
+            { /*   <PureCompo/>*/}
+            <Fconponent ref={this.myInput}/>
             </div>
         )
     }

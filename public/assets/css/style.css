@@ -25,3 +25,7 @@ body{
     direction: rtl;
     text-align: right;
 }
+.nh{
+    height: fit-content;
+}
+
