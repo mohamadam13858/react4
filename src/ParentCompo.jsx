@@ -1,29 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import ReactDOM from 'react-dom';
 import PureCompo from './pureComponent';
 
 class PrentConpo extends Component {
-    constructor() {
+    constructor(){
         super()
-        this.state = {
-            name: "mohamad"
-        }
-
+        this.componentRef = createRef();
     }
-
-componentDidMount(){
-    setInterval(()=>{
-     this.setState({
-        name:"mohamad"+ new Date()
-     })
-    },1000)
-}
-
-
+    handleChangeCompoName = ()=>{
+        this.componentRef.current.handleChangeName();
+    }
     render() {
         return (
             <div>
-                <PureCompo name={this.state.name} />
+                <PureCompo ref={this.componentRef} />
+                <button className="btn btn-info my-3" onClick={this.handleChangeCompoName} >test</button>
             </div>
         )
     }
